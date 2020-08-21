@@ -6,7 +6,7 @@
 
 enum ButtonType
 {
-	MIN_HUTTON = 0,   //最小化及关闭按钮
+	MIN_BUTTON = 0,   //最小化及关闭按钮
 	MIN_MAN_BUTTON,   //最小化、最大化及关闭按钮
 	ONLY_CLOSE_BUTTON //只有关闭按钮
 };
