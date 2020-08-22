@@ -16,14 +16,14 @@ public:
 	void loadStyleSheet(const QString& sheetName);
 
 	//获取圆头像
-	QPixmap getRoundImage(const QPixmap& src, QPixmap& mask, QSize masksize = QSize(0, 0));
+	QPixmap getRoundImage(const QPixmap& src, QPixmap& mask, QSize maskSize = QSize(0, 0));
 
 private:
 	void initBackGroundColor(); //初始化背景
 
 protected:
 	void paintEvent(QPaintEvent*);            //绘制事件
-	void mousePressEvent(QMouseEvent* event); //鼠标事件
+	void mousePressEvent(QMouseEvent* event); //鼠标按下事件
 	void mouseMoveEvent(QMouseEvent* event);  //鼠标移动事件
 	void mouseReleaseEvent(QMouseEvent*);     //鼠标松开事件
 	
