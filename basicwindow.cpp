@@ -6,12 +6,17 @@
 #include <QMouseEvent>
 #include <QRect>
 #include <QDesktopWidget>
+#include "CommonUtils.h"
+#include "NotifyManager.h"
 
 BasicWindow::BasicWindow(QWidget *parent)
 	: QDialog(parent)
 {
+	m_colorBackGround = CommonUtils::getDefaultSkinColor();
 	setWindowFlags(Qt::FramelessWindowHint);
 	setAttribute(Qt::WA_TranslucentBackground, true);
+	connect(NotifyManager::getInstance(), SIGNAL(onSignalSkinChanged(const QColor&)),
+		this, SLOT(onSignalSkinChanged(const QColor&)));
 }
 
 BasicWindow::~BasicWindow()
